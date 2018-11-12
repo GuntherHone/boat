@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>svgboat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-200 -200 400 400"
+        class="meter"
+      >
+        <circle class="secondary-color" cx="0" cy="0" r="12" />
+
+        <path class="arc left" d="M-180 0 A180 180 0 0 1 -61.56 -169.14" />
+
+        <path class="arc right" d="M61.56 -169.14 A180 180 0 0 1 180 0" />
+
+        <defs>
+          <path
+            id="marker-primary"
+            d="M0 165 L0 190"
+            stroke-width="2"
+            class="primary-color"
+          />
+          <path
+            id="marker-secondary"
+            d="M0 180 L0 190"
+            stroke-width="1"
+            class="primary-color"
+          />
+        </defs>
+
+        <use xlink:href="#marker-primary" />
+        <use xlink:href="#marker-primary" transform="rotate(-30)" />
+        <use xlink:href="#marker-primary" transform="rotate(30)" />
+        <use xlink:href="#marker-primary" transform="rotate(-60)" />
+        <use xlink:href="#marker-primary" transform="rotate(60)" />
+        <use xlink:href="#marker-primary" transform="rotate(-90)" />
+        <use xlink:href="#marker-primary" transform="rotate(90)" />
+        <use xlink:href="#marker-primary" transform="rotate(-120)" />
+        <use xlink:href="#marker-primary" transform="rotate(120)" />
+        <use xlink:href="#marker-primary" transform="rotate(-150)" />
+        <use xlink:href="#marker-primary" transform="rotate(150)" />
+
+        <use xlink:href="#marker-secondary" transform="rotate(-10)" />
+        <use xlink:href="#marker-secondary" transform="rotate(10)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-20)" />
+        <use xlink:href="#marker-secondary" transform="rotate(20)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-40)" />
+        <use xlink:href="#marker-secondary" transform="rotate(40)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-50)" />
+        <use xlink:href="#marker-secondary" transform="rotate(50)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-70)" />
+        <use xlink:href="#marker-secondary" transform="rotate(70)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-80)" />
+        <use xlink:href="#marker-secondary" transform="rotate(80)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-100)" />
+        <use xlink:href="#marker-secondary" transform="rotate(100)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-110)" />
+        <use xlink:href="#marker-secondary" transform="rotate(110)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-130)" />
+        <use xlink:href="#marker-secondary" transform="rotate(130)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-140)" />
+        <use xlink:href="#marker-secondary" transform="rotate(140)" />
+        <use xlink:href="#marker-secondary" transform="rotate(-160)" />
+        <use xlink:href="#marker-secondary" transform="rotate(160)" />
+
+        <text
+          x="0"
+          y="145"
+          transform="rotate(60) rotate(-60,0,145)"
+          class="text"
+        >
+          120
+        </text>
+        <text
+          x="0"
+          y="145"
+          transform="rotate(-60) rotate(60,0,145)"
+          class="text"
+        >
+          120
+        </text>
+
+        <text
+          x="0"
+          y="145"
+          transform="rotate(90) rotate(-90,0,145)"
+          class="text"
+        >
+          90
+        </text>
+        <text
+          x="0"
+          y="145"
+          transform="rotate(-90) rotate(90,0,145)"
+          class="text"
+        >
+          90
+        </text>
+
+        <text
+          x="0"
+          y="145"
+          transform="rotate(120) rotate(-120,0,145)"
+          class="text"
+        >
+          60
+        </text>
+        <text
+          x="0"
+          y="145"
+          transform="rotate(-120) rotate(120,0,145)"
+          class="text"
+        >
+          60
+        </text>
+
+        <text
+          x="0"
+          y="145"
+          transform="rotate(150) rotate(-150,0,145)"
+          class="text"
+        >
+          30
+        </text>
+        <text
+          x="0"
+          y="145"
+          transform="rotate(-150) rotate(150,0,145)"
+          class="text"
+        >
+          30
+        </text>
+
+        <text class="text-speed shadow" y="80">888</text>
+
+        <text class="text legend" x="45" y="125">kts</text>
+
+        <path
+          fill="none"
+          stroke-width="1px"
+          d="M-80 20 L-80 -20 Q -80 -85 0 -180 80 -85 80 -20 L80 20"
+          class="primary-color"
+        />
+
+        <path
+          d="M0 0 L0 -196"
+          stroke-width="8"
+          class="needle primary-color"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <!--
+        <input class="direction-input" type="range" min="0" max="360" value="63" step="1" oninput="setRotationValue(event)">
+
+        <input class="danger-input" type="range" min="20" max="180" value="60" step="1" oninput="setDangerAngle(event)">
+      -->
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-200 -200 400 400"
+        class="meter"
+      >
+        <defs>
+          <path
+            id="marker-primary"
+            d="M0 165 L0 190"
+            stroke-width="2"
+            class="primary-color"
+          />
+          <path
+            id="marker-secondary"
+            d="M0 180 L0 190"
+            stroke-width="1"
+            class="primary-color"
+          />
+        </defs>
+
+        <g id="compass-disc">
+          <use xlink:href="#marker-primary" />
+          <use xlink:href="#marker-primary" transform="rotate(-90)" />
+          <use xlink:href="#marker-primary" transform="rotate(-180)" />
+          <use xlink:href="#marker-primary" transform="rotate(90)" />
+
+          <g id="compass-headings">
+            <text x="0" y="140" class="text-NESW">S</text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(30) rotate(-30,0,140)"
+              class="text-degrees"
+            >
+              210
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(60) rotate(-60,0,140)"
+              class="text-degrees"
+            >
+              240
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(90) rotate(-90,0,140)"
+              class="text-NESW"
+            >
+              W
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(120) rotate(-120,0,140)"
+              class="text-degrees"
+            >
+              300
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(150) rotate(-150,0,140)"
+              class="text-degrees"
+            >
+              330
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(180) rotate(-180,0,145)"
+              class="text-NESW"
+            >
+              N
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(210) rotate(-210,0,140)"
+              class="text-degrees"
+            >
+              30
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(240) rotate(-240,0,140)"
+              class="text-degrees"
+            >
+              60
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(270) rotate(-270,0,145)"
+              class="text-NESW"
+            >
+              E
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(300) rotate(-300,0,140)"
+              class="text-degrees"
+            >
+              120
+            </text>
+
+            <text
+              x="0"
+              y="140"
+              transform="rotate(330) rotate(-330,0,140)"
+              class="text-degrees"
+            >
+              150
+            </text>
+          </g>
+
+          <use xlink:href="#marker-primary" transform="rotate(-30)" />
+          <use xlink:href="#marker-primary" transform="rotate(-60)" />
+          <use xlink:href="#marker-primary" transform="rotate(-120)" />
+          <use xlink:href="#marker-primary" transform="rotate(-150)" />
+          <use xlink:href="#marker-primary" transform="rotate(30)" />
+          <use xlink:href="#marker-primary" transform="rotate(60)" />
+          <use xlink:href="#marker-primary" transform="rotate(120)" />
+          <use xlink:href="#marker-primary" transform="rotate(150)" />
+
+          <use xlink:href="#marker-secondary" transform="rotate(-10)" />
+          <use xlink:href="#marker-secondary" transform="rotate(10)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-20)" />
+          <use xlink:href="#marker-secondary" transform="rotate(20)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-40)" />
+          <use xlink:href="#marker-secondary" transform="rotate(40)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-50)" />
+          <use xlink:href="#marker-secondary" transform="rotate(50)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-70)" />
+          <use xlink:href="#marker-secondary" transform="rotate(70)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-80)" />
+          <use xlink:href="#marker-secondary" transform="rotate(80)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-100)" />
+          <use xlink:href="#marker-secondary" transform="rotate(100)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-110)" />
+          <use xlink:href="#marker-secondary" transform="rotate(110)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-130)" />
+          <use xlink:href="#marker-secondary" transform="rotate(130)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-140)" />
+          <use xlink:href="#marker-secondary" transform="rotate(140)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-160)" />
+          <use xlink:href="#marker-secondary" transform="rotate(160)" />
+          <use xlink:href="#marker-secondary" transform="rotate(-170)" />
+          <use xlink:href="#marker-secondary" transform="rotate(170)" />
+        </g>
+
+        <circle cx="0" cy="0" r="110" fill="rgb(178,207,221)" />
+        <path
+          d="M-50 -90 L0 -130 50 -90 Z"
+          class="primary-color"
+          fill="rgb(178,207,221)"
+        />
+        <text x="0" y="0" class="text-heading" id="heading">330&deg;</text>
+      </svg>
+
+      <div class="debug"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

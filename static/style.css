@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Segment7Standard";
+  src: url("Segment7Standard.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #242b58;
+}
+
+input {
+  width: 80%;
+}
+
+.meter {
+  width: 50vw;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-color {
+  stroke: rgb(178, 207, 221);
+}
+
+.secondary-color {
+  fill: rgb(123, 141, 172);
+}
+
+.text {
+  font: bold 24px arial;
+  fill: rgb(178, 207, 221);
+  alignment-baseline: middle;
+  text-anchor: middle;
+}
+
+.text-NESW {
+  font: bold 44px arial;
+  fill: rgb(178, 207, 221);
+  alignment-baseline: middle;
+  text-anchor: middle;
+}
+
+.text-degrees {
+  font: bold 18px arial;
+  fill: rgb(178, 207, 221);
+  alignment-baseline: middle;
+  text-anchor: middle;
+}
+
+.text-heading {
+  font: normal 64px arial;
+  fill: black;
+  alignment-baseline: middle;
+  text-anchor: middle;
+}
+
+.text-speed {
+  font: italic 80px "Segment7Standard";
+  fill: rgb(178, 207, 221);
+  alignment-baseline: middle;
+  text-anchor: middle;
+}
+
+.shadow {
+  fill: rgba(178, 207, 221, 0.125);
+}
+
+.arc {
+  stroke-width: 20;
+  fill: none;
+}
+
+.left {
+  stroke: rgb(178, 0, 0);
+}
+
+.right {
+  stroke: rgb(0, 178, 0);
+}
+
+@media all and (orientation: portrait) {
+  .flex {
+    flex-direction: column;
+  }
+  .meter {
+    width: auto;
+    height: 50vh;
+  }
+}
