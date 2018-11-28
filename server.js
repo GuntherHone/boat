@@ -20,7 +20,7 @@ setInterval(() => {
       client.send(serializedHeading);
     }
   });
-}, 15);
+}, 30);
 
 wss.on("connection", (ws, req) => {
   ws.on("close", (socket, code, reason) =>

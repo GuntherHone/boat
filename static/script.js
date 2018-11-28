@@ -1,10 +1,25 @@
-(() => {
+(function thing() {
+  const meterScreen = document.querySelector(".meter-screen");
   const needle = document.querySelector(".needle");
   const arcLeft = document.querySelector(".arc.left");
   const arcRight = document.querySelector(".arc.right");
   const compassDisc = document.querySelector("#compass-disc");
   const compassHeadings = document.querySelectorAll("#compass-headings text");
   const heading = document.querySelector("#heading");
+  const infoScreen = document.querySelector(".info-screen");
+
+  window.setState = function setState(mode) {
+    switch (mode) {
+      case "info":
+        meterScreen.style.display = "none";
+        infoScreen.style.display = "flex";
+        break;
+      case "meter":
+        meterScreen.style.display = "block";
+        infoScreen.style.display = "none";
+        break;
+    }
+  };
 
   /***********/
   function setRotationValue(event) {
@@ -43,11 +58,19 @@
   });
 
   const ws = new WebSocket(`ws://${location.host}`);
+  
   ws.onmessage = event => {
     let data = JSON.parse(event.data);
     window.requestAnimationFrame(() => {
       needle.setAttribute("transform", `rotate(${data.heading})`);
     });
-  }
+  };
 
+  ws.onclose = event => {
+    alert("Websocket closed by host");
+  };
+
+  ws.onerror = event => {
+    alert("Websocket error");
+  };
 })();

@@ -9,10 +9,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #242b58;
-}
-
-input {
-  width: 80%;
+  color:rgb(123, 141, 172);
+  font-family:arial;
 }
 
 .meter {
@@ -85,6 +83,36 @@ input {
 
 .right {
   stroke: rgb(0, 178, 0);
+}
+
+.bottom-right {
+  position:absolute;
+  right:0;
+  bottom:0;
+  margin:15px;
+}
+
+.bottom-left {  
+  position:absolute;
+  left:0;
+  bottom:0;
+  margin:15px;
+}
+
+.icon {
+  width:32px;
+  height:32px;
+  background-color: rgba(178, 207, 221, 0.125);
+  border-radius:50%;
+  padding:10px;
+}
+
+.icon:active {
+  background-color: rgba(178, 207, 221, 0.75);
+}
+
+.icon path {
+  fill: rgb(178, 207, 221);
 }
 
 @media all and (orientation: portrait) {
