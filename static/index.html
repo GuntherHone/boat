@@ -159,12 +159,6 @@
           />
         </svg>
 
-        <!--
-          <input class="direction-input" type="range" min="0" max="360" value="63" step="1" oninput="setRotationValue(event)">
-
-          <input class="danger-input" type="range" min="20" max="180" value="60" step="1" oninput="setDangerAngle(event)">
-        -->
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-200 -200 400 400"
@@ -343,6 +337,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         class="icon bottom-right"
+        onclick="setState('settings')"
       >
         <path
           d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"
@@ -365,7 +360,7 @@
       </svg>
     </div>
 
-    <div class="info-screen flex" style="display:none">
+    <div class="info-screen" style="display:none">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -377,6 +372,23 @@
         />
       </svg>
       <h1>About SVG Boat</h1>
+    </div>
+
+    <div class="settings-screen" style="display:none">
+      <div class="flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          onclick="setState('meter')"
+          class="icon bottom-left"
+        >
+          <path
+            d="M12.01 2a9.941 9.941 0 0 0-7.072 2.938c-3.899 3.898-3.899 10.243 0 14.142 1.895 1.895 4.406 2.938 7.072 2.938s5.177-1.043 7.07-2.937c3.899-3.898 3.899-10.243 0-14.144A9.938 9.938 0 0 0 12.01 2zm5.656 15.667c-1.516 1.516-3.524 2.351-5.656 2.351A7.95 7.95 0 0 1 5.76 17h12.499c-.185.23-.38.454-.593.667zM19.937 13a7.945 7.945 0 0 1-.509 2H4.59a7.945 7.945 0 0 1-.509-2H6v-2H4.084a7.955 7.955 0 0 1 1.609-3.892L7.05 8.465l1.414-1.414-1.358-1.358A7.93 7.93 0 0 1 11 4.071V6h2V4.068a7.916 7.916 0 0 1 4.279 1.933l-4.452 3.18A1.97 1.97 0 0 0 12.008 9 1.992 1.992 0 1 0 14 10.99c0-.061-.013-.118-.018-.178l4.632-3.309a7.944 7.944 0 0 1 1.319 3.496H18v2h1.937z"
+          />
+        </svg>
+        <h1>Settings</h1>
+        <input type="range">
+      </div>
     </div>
 
     <script src="script.js"></script>

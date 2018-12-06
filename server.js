@@ -26,7 +26,7 @@ wss.on("connection", (ws, req) => {
   ws.on("close", (socket, code, reason) =>
     console.log(`Connection to ${req.connection.remoteAddress} closed.`)
   );
-  console.log(`${req.connection.remoteAddress}`);
+  console.log(`Connection from ${req.connection.remoteAddress}`);
 });
 
 server.listen(5555, () => {

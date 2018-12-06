@@ -1,24 +1,21 @@
 (function thing() {
-  const meterScreen = document.querySelector(".meter-screen");
+  const screens = {
+    meter: document.querySelector(".meter-screen"),
+    info: document.querySelector(".info-screen"),
+    settings: document.querySelector(".settings-screen")
+  };
+
   const needle = document.querySelector(".needle");
   const arcLeft = document.querySelector(".arc.left");
   const arcRight = document.querySelector(".arc.right");
   const compassDisc = document.querySelector("#compass-disc");
   const compassHeadings = document.querySelectorAll("#compass-headings text");
   const heading = document.querySelector("#heading");
-  const infoScreen = document.querySelector(".info-screen");
 
   window.setState = function setState(mode) {
-    switch (mode) {
-      case "info":
-        meterScreen.style.display = "none";
-        infoScreen.style.display = "flex";
-        break;
-      case "meter":
-        meterScreen.style.display = "block";
-        infoScreen.style.display = "none";
-        break;
-    }
+    Object.keys(screens).forEach(screen => {
+      screens[screen].style.display = screen === mode ? "block" : "none";
+    });
   };
 
   /***********/
@@ -58,7 +55,7 @@
   });
 
   const ws = new WebSocket(`ws://${location.host}`);
-  
+
   ws.onmessage = event => {
     let data = JSON.parse(event.data);
     window.requestAnimationFrame(() => {
