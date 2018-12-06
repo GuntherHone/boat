@@ -70,4 +70,8 @@
   ws.onerror = event => {
     alert("Websocket error");
   };
+
+  document.ontouchmove = function(e) {
+    e.preventDefault();
+  };
 })();
